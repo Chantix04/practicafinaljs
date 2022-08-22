@@ -106,28 +106,38 @@ console.log(puntosiete())
 // // COMO ARGUMENTOS. DEBE RETORNAR EL VALOR DE LA PROPIEDAD CUYA KEY SEA IGUAL
 // // AL VALOR DEL STRING DEL ARGUMENTO
 
-function puntoocho(objeto1, str){
-    objeto1= {
-        "tiene avión": "si",
-        sobrenombre: "Chapo",
-        trabajo: "dice que es granjero pero no le creo"
-    }
-    str = "dice que es granjero pero no le creo"
-    for (str in objeto1) {
-        console.log(objeto1)
-    }
-	return 
+// 8
+const casa={
+    provincia: "Formosa",
+    color: "Verde",
+    altura: "20mts",
+    condición: "vendida",
 }
-console.log(puntoocho())
-// // Ej: objeto({nombre: 'Rosa', apellido: 'Gomez', Tel: '12434'}, 'nombre')
-// // 	Retorna 'Rosa'
 
-// // 9)---------
-// // IMPLEMENTAR UNA FUNCIÓN QUE RECIBA UN OBJETO COMO ARGUMENTO Y RETORNAR
-// // LA SUMA DE TODOS SUS VALORES.
+    function propiedad(obj,prop){
+    let aux
+    for (key in obj ){
+   if (key == prop){
+    aux=obj[key]
+   }
+    }
+    return console.log(aux)
+}
+console.log(propiedad(casa,"condición"))
 
-// function puntonueve({}){
+// 9
+const objeto0={
+    altura1: 90 ,
+    altura2: 82,
+    altura3: 87
 
-// 	return
-// }
-// console.log(puntonueve())
+}
+let sum=0
+function suma(objeto){
+for (let key of Object.entries(objeto)) {
+    sum+= key[1]
+    
+}return console.log(sum)
+	
+}
+console.log(suma(objeto0))
